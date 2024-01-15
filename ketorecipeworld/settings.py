@@ -27,10 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER_EXTERNAL_HOSTNAME' not in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['127.0.0.1', 'ketowonderverse.onrender.com']
+
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -87,10 +88,11 @@ WSGI_APPLICATION = 'ketorecipeworld.wsgi.application'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",  # Replace with your local development server URL
-    "https://ketowonderverse.onrender.com",
-    # Add more origins if needed
+    'http://ketowonderverse.onrender.com',
+    'https://example2.com',
+    'http://localhost:8000',
 ]
+
 
 # Allow all headers
 CORS_ALLOW_ALL_HEADERS = True
@@ -149,6 +151,7 @@ DATABASES = {
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 
 # Password validation
