@@ -1,0 +1,94 @@
+{% extends 'ketosite/base.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+<!--Carousel -->
+<div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel">
+ 
+    <div class="carousel-inner"> 
+
+        <!--Item Active 1--> 
+        <div class="carousel-item active">
+            <img src="{% static 'images/slide1.jpg' %}" class=" c-img" width="720" height="90" loading="lazy"  alt="christmass">
+           <div class="carousel-caption mt-2">
+                <h1 class="display-4 font-weight-bold mb-4 text-uppercase">Contact Us</h1>
+                <p class="fs-3 text-white">Stay connected with us for questions or suggestion</p><br>
+                
+                
+                
+           </div>
+       </div> 
+
+   </div>
+
+</div>
+
+
+<!--End of carousel -->
+
+
+
+
+<div id="product-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Feel free to send a message</h2>
+                    <img src="{% static 'images/under-heading.png' %}" alt="" >
+                </div>
+            </div>
+        </div>
+        <div id="contact-us">
+            <div class="container">
+                <div class="row">
+                    <div class="product-item col-md-12">
+                        <div class="row">
+                            <div class="col-md-8">  
+                                <div class="message-form">
+                                    <form action="#" method="post" class="send-message">
+                                        <div class="row">
+                                        <div class="name col-md-4">
+                                            <input type="text" name="name" id="name" placeholder="Name" />
+                                        </div>
+                                        <div class="email col-md-4">
+                                            <input type="text" name="email" id="email" placeholder="Email" />
+                                        </div>
+                                        <div class="subject col-md-4">
+                                            <input type="text" name="subject" id="subject" placeholder="Subject" />
+                                        </div>
+                                        </div>
+                                        <div class="row">        
+                                            <div class="text col-md-12">
+                                                <textarea name="text" placeholder="Message"></textarea>
+                                            </div>   
+                                        </div>                              
+                                        <div class="send">
+                                            <button type="submit">Send</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="info">
+                                    <p>Duis at pharetra neque, ut condimentum, purus nisl pretium quam, in pulvinar velit massa id elit. </p>
+                                    <ul>
+                                        <li><i class="fa fa-phone"></i>Available Soon</li>
+                                        <li><i class="fa fa-globe"></i>Available Soon</li>
+                                        <li><i class="fa fa-envelope"></i><a href="#">Available Soon</a></li>
+                                    </ul>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+
+{% endblock content %}

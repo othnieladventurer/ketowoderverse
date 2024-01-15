@@ -1,0 +1,68 @@
+{% extends 'ketosite/base.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+<div id="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-content">
+                    <h2>Blogs</h2>
+                    <span>Home / <a href="single-post.html">Latest Post</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- blog post -->
+<div id="latest-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading-section">
+                    <h2>Latest blog posts</h2>
+                    <img src="{% static 'images/under-heading.png' %}" alt="" >
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for article in articles %}
+            <div class="col-md-4 col-sm-6">
+                <div class="blog-post">
+                    <div class="blog-thumb">
+                        <img src="{{ article.image.url }}" alt="" style="width: 100%; height: 400px; object-fit: cover;"  />
+                    </div>
+                    <div class="blog-content">
+                        <div class="content-show">
+                            <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+                            
+                        </div>
+                        <div class="content-hide">
+                           
+                            
+                            <button class="" style="background-color: #fd7e14;"><a href="{{ article.get_absolute_url }}" style="color: white;">Read</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- ENd blog -->
+
+
+
+
+
+
+
+
+{% endblock content %}
