@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'ketosite',
     'ckeditor',
     'ckeditor_uploader',
+    'corsheaders',
     
 ]
 
@@ -80,6 +81,27 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ketorecipeworld.wsgi.application'
+
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8000",  # Replace with your local development server URL
+    "https://ketowonderverse.onrender.com",
+    # Add more origins if needed
+]
+
+# Allow all headers
+CORS_ALLOW_ALL_HEADERS = True
+
+# Allow all methods
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 
 
