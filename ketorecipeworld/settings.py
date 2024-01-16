@@ -88,27 +88,7 @@ WSGI_APPLICATION = 'ketorecipeworld.wsgi.application'
 
 
 
-CORS_ALLOWED_ORIGINS = [
-    'http://ketowonderverse.onrender.com',
-    'https://example2.com',
-    'http://localhost:8000',
-]
-
-
-# Allow all headers
-CORS_ALLOW_ALL_HEADERS = True
-
-# Allow all methods
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
-
-
+CORS_ALLOW_All_ORIGINS = True
 
 
 
