@@ -69,7 +69,7 @@
         </div>
         <div class="col-md-6">
             <div class="about-image">
-                <img src="{% static 'images/blogpost1.jpg' %}" alt="Profile Picture" class="img-fluid">
+                <img src="{% static 'images/blogpost1.jpg' %}" alt="Profile Picture" loading="lazy" class="img-fluid">
             </div>
         </div>
     </div>
@@ -79,12 +79,12 @@
 
 
 <!--Feature -->
-<div class="container mt-4">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
             <div class="text-center mb-4">
                 <h2>Featured Recipes</h2>
-                <img src="{% static 'images/under-heading.png' %}" alt="under-heading.png" class="img-fluid" >
+                <img src="{% static 'images/under-heading.png' %}" alt="under-heading.png" loading="lazy" class="img-fluid" >
             </div>
         </div>
     </div>
@@ -93,9 +93,9 @@
         {% for article in featureds %}
         <div class="col-md-4 mb-4">
             <div class="card border-0">
-                <a href="{{ article.get_absolute_url }}"> <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.image_alt }}" style="width: 100%; height: 270px; object-fit: cover;"></a>
+                <a href="{{ article.get_absolute_url }}"> <img src="{{ article.image.url }}" loading="lazy" class="card-img-top" alt="{{ article.image_alt }}" style="width: 100%; height: 270px; object-fit: cover;"></a>
                 <div class="card-body">
-                    <h2  class="link" style="font-size: 25px;"><a class="" href="{{ article.get_absolute_url }}" style="color: black; text-decoration: none;">{{ article.title }}</a></h2><br>
+                    <h2  style="font-size: 25px;"><a class="" href="{{ article.get_absolute_url }}" style="color: black; text-decoration: none;">{{ article.title }}</a></h2><br>
                     <button class="btn" style="background-color: #fd7e14;"><a href="{{ article.get_absolute_url }}" style="color: white;">Read</a></button>
                 </div>
             </div>
@@ -108,12 +108,12 @@
 
 <!-- blog post -->
 <div id="latest-blog">
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-12 mb-4">
                 <div class="text-center">
                     <h2>Latest blog posts</h2>
-                    <img src="{% static 'images/under-heading.png' %}" alt="under-heading.png" class="img-fluid" >
+                    <img src="{% static 'images/under-heading.png' %}" alt="under-heading.png" loading="lazy" class="img-fluid" >
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
                     <div class="blog-thumb">
-                        <img src="{{ article.image.url }}" alt="" style="width: 100%; height: 400px; object-fit: cover;"  />
+                        <img src="{{ article.image.url }}" alt="article image" loading="lazy" style="width: 100%; height: 400px; object-fit: cover;"  />
                     </div>
                     <div class="blog-content">
                         <div class="content-show">
@@ -158,10 +158,10 @@
 <!--Top recipes -->
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-12 mb-4">
+        <div class="col-md-12 mb-4 mt-3">
             <div class="text-center">
                 <h2>Top Recipes</h2>
-                <img src="{% static 'images/under-heading.png' %}" alt=""  class="img-fluid">
+                <img src="{% static 'images/under-heading.png' %}" loading="lazy" alt="underline heading"  class="img-fluid">
             </div>
         </div>
     </div>
@@ -170,9 +170,9 @@
         {% for recipe in recipes %}
         <div class="col-md-4 mb-4">
             <div class="card border-0">
-                <a href="{{ recipe.get_absolute_url }}"><img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.image_alt }}"></a>
+                <a href="{{ recipe.get_absolute_url }}"><img src="{{ recipe.image.url }}" loading="lazy" class="card-img-top" alt="{{ recipe.image_alt }}"></a>
                 <div class="card-body">
-                    <h2  class="link" style="font-size: 25px;"><a class="" href="{{ recipe.get_absolute_url }}" style="color: black; text-decoration: none;">{{ recipe.title }}</a></h2><br>
+                    <h2 style="font-size: 25px;"><a class="" href="{{ recipe.get_absolute_url }}" style="color: black; text-decoration: none;">{{ recipe.title }}</a></h2><br>
                    
                     
                 </div>
@@ -184,7 +184,7 @@
     </div>
 
         <!-- Centered button -->
-    <div class="text-center mt-4">
+    <div class="text-center mt-5">
         {% for category_key, category_display in categories %}
             {% if forloop.first %}
         <button class="btn btn-lg" style="background-color: black;"><a href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}" style="color: white;">More Recipes</a></button>

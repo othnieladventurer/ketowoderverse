@@ -43,7 +43,7 @@
             <div class="col-md-12 mt-4">
                 <div class="text-center">
                     <h2>Latest blog posts</h2>
-                    <img src="{% static 'images/under-heading.png' %}" alt="" class="img-fluid"><br>
+                    <img src="{% static 'images/under-heading.png' %}" alt="blog posts" loading="lazy" class="img-fluid"><br>
                     <ul id="categories" class="list-inline mt-3 text-center">
                         {% for category_key, category_display in categories %}
                         <li class="list-inline-item">
@@ -65,7 +65,7 @@
             <div class="col-md-4 col-sm-6">
                 <div class="blog-post">
                     <div class="blog-thumb">
-                        <img src="{{ article.image.url }}" alt="" style="width: 100%; height: 400px; object-fit: cover;"  />
+                        <img src="{{ article.image.url }}" alt="{{ article.image_alt }}" loading="lazy" style="width: 100%; height: 400px; object-fit: cover;"  />
                     </div>
                     <div class="blog-content">
                         <div class="content-show">
@@ -75,7 +75,7 @@
                         <div class="content-hide">
                            
                             
-                            <button class="" style="background-color: #fd7e14;"><a href="{{ article.get_absolute_url }}" style="color: white;">Read</a></button>
+                            <button  style="background-color: #fd7e14;"><a href="{{ article.get_absolute_url }}" style="color: white;">Read</a></button>
                         </div>
                     </div>
                 </div>

@@ -21,7 +21,7 @@
                             <div class="col-md-8">  
                                     <div class="image">
                                         <div class="image-post">
-                                            <img src="{{ object.image.url }}" alt=" {{ featured.image_alt}}" style="width: 100%; height: 450px; object-fit: cover;">
+                                            <img src="{{ object.image.url }}" alt=" {{ featured.image_alt}}" loading="lazy" style="width: 100%; height: 450px; object-fit: cover;">
                                         </div>
                                     </div>
                                     <br>
@@ -189,7 +189,7 @@
                                         <div class="posts">
                                             <div class="recent-post">
                                                 <div class="recent-post-thumb">
-                                                    <img src="{% static 'images/recent-post1.jpg' %}" alt="">
+                                                    <img src="{% static 'images/recent-post1.jpg' %}" alt="recent post">
                                                 </div>
                                                 <div class="recent-post-info">
                                                     <h6><a href="#">Vestibulum molestie odio sit amet</a></h6>
