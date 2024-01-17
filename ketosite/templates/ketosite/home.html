@@ -167,7 +167,7 @@
     </div>
 
     <div class="row">
-        {% for recipe in recipes %}
+        {% for recipe in recipes|slice:"6" %}
         <div class="col-md-4 mb-4">
             <div class="card border-0">
                 <a href="{{ recipe.get_absolute_url }}"><img src="{{ recipe.image.url }}" loading="lazy" class="card-img-top" alt="{{ recipe.image_alt }}"></a>

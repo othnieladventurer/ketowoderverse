@@ -47,8 +47,8 @@
                     <ul id="categories" class="list-inline mt-3 text-center">
                         {% for category_key, category_display in categories %}
                         <li class="list-inline-item">
-                            <a class="link" href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">
-                                {{ category_display }}
+                            <a style="color: black; font-size: 18px;"  href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">
+                                {{ category_display }} 
                             </a>
                         </li>
                         {% endfor %}
