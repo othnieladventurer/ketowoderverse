@@ -17,7 +17,12 @@
  
          <!--Item Active 1--> 
          <div class="carousel-item active">
-            <img src="{% static 'images/slide.jpg' %}" class=" c-img" width="720" height="90" loading="lazy"  alt="christmass">
+            <a href="{% static 'images/slide_01.webp' %}">
+                <picture>
+                  <source srcset="{% static 'images/slide_01.webp' %}" type="image/webp">
+                  <img src="{% static 'images/slide_01.webp' %}" class="c-img" width="720" height="90" loading="lazy" alt="christmas">
+                </picture>
+              </a>
             <div class="carousel-caption mt-2">
                  <h1 class="display-4 font-weight-bold mb-4 text-uppercase">{{ request.path|slice:'1:'|slice:'-1' }}
                 </h1>
