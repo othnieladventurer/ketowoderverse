@@ -33,9 +33,7 @@
                                                 <span>{{ object.date_created }}</span>
                                                 
                                             </div>
-                                            {% if comments %}
-                                            <span class="subtitle">4 comments</span>
-                                            {% endif %}
+                                           
                                         </div>
                                         <p>{{ object.content|safe}}</p>
                                     </div>
@@ -50,30 +48,10 @@
                                         </p>
                                         
                                         <ul style="list-style: none; padding: 0; text-align: left;">
-                                            <!-- Affiliate Link 1 -->
-                                            <li style="margin-bottom: 10px;">
-                                                <a href="http://tinyurl.com/3b2cys8t" target="_blank" style="text-decoration: none; font-weight: bold; color: #333;">
-                                                    <i class="fa fa-angle-right" style="color: #fd7e14;"></i> GET A CUSTOM KETO PLAN
-                                                </a>
-                                            </li>
-                                            
-                                            <!-- Affiliate Link 2 -->
-                                            <li style="margin-bottom: 10px;">
-                                                <a href="http://tinyurl.com/hv34hjej" target="_blank" style="text-decoration: none; font-weight: bold; color: #333;">
-                                                    <i class="fa fa-angle-right" style="color: #fd7e14;"></i> FREE Ultimate Keto Meal Plan
-                                                </a>
-                                            </li>
-                                    
-                                            <!-- Affiliate Link 3 -->
-                                            <li style="margin-bottom: 10px;">
-                                                <a href="http://tinyurl.com/w3d8he7f" target="_blank" style="text-decoration: none; font-weight: bold; color: #333;">
-                                                    <i class="fa fa-angle-right" style="color: #fd7e14;"></i> FREE Keto Snack Cookbook (Physical Print Version)!
-                                                </a>
-                                            </li><br>
 
                                             <li style="margin-bottom: 10px;">
                                                 <a href="http://tinyurl.com/ysc7av4e" target="_blank" style="text-decoration: none; font-weight: bold; color: #333;">
-                                                    <i class="fa fa-angle-right" style="color: #fd7e14;"></i> SUBSCRIBE TO OUR NEWSLETTER AND RECEIVE A FREE KETO RECIPE EBOOK***
+                                                    <i class="fa fa-angle-right" style="color: #fd7e14;"></i>Get this {{ object.title }} for free
                                                 </a>
                                             </li>
                                         </ul>
@@ -90,68 +68,6 @@
                                     <div class="divide-line">
                                         <img src="images/div-line.png" alt="" />
                                     </div>
-
-                                    {% if comments %}
-                                    <div class="comments-title">
-                                        <div class="comment-section">
-                                            <h4>4 comments</h4>
-                                        </div>
-                                    </div>
-                                    <div class="all-comments">
-                                        <div class="view-comments">
-                                            <div class="comments">
-                                                <div class="author-thumb">
-                                                    <img src="images/author-comment1.jpg" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h6>Cindy Venna</h6>
-                                                    <span class="date">11 Sep 2084 - 12:25 PM</span>
-                                                    <a href="#" class="hidden-xs">Reply</a>
-                                                    <p>Nulla ac elementum nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam erat volutpat. Donec rhoncus quam sit amet sodales finibus. Donec pellentesque non massa eu maximus. In non tellus id sem tempor gravida.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="replyed-form">
-                                            <div class="comments replyed">
-                                                <div class="author-thumb">
-                                                    <img src="images/author-comment2.jpg" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h6>George Tanya</h6>
-                                                    <span class="date">12 Sep 2084 - 8:48 AM</span>
-                                                    <a href="#" class="hidden-xs">Reply</a>
-                                                    <p>In pulvinar venenatis odio. Sed in ex sit amet ipsum posuere mollis. Nam nec risus feugiat dui ultrices dignissim. Morbi ex purus, commodo a tristique eu, mollis a nisi. Pellentesque in enim sit amet tellus ornare fringilla eget eu arcu.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="view-comments">
-                                            <div class="comments">
-                                                <div class="author-thumb">
-                                                    <img src="images/author-comment3.jpg" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h6>Brooker Aung</h6>
-                                                    <span class="date">12 Sep 2084 - 10:40 AM</span>
-                                                    <a href="#" class="hidden-xs">Reply</a>
-                                                    <p>Duis rutrum, libero eu blandit gravida, massa orci cursus nisi, vehicula facilisis purus neque dignissim urna. Etiam molestie elementum elit at tempus. Suspendisse quis consectetur nisi, vitae consequat sem. In et quam id libero venenatis venenatis. Morbi vitae justo vulputate, auctor augue eu, pulvinar augue.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="view-comments">
-                                            <div class="comments">
-                                                <div class="author-thumb">
-                                                    <img src="images/author-comment4.jpg" alt="">
-                                                </div>
-                                                <div class="comment-body">
-                                                    <h6>Crystal Mya</h6>
-                                                    <span class="date">14 Sep 2084 - 05:16 PM</span>
-                                                    <a href="#" class="hidden-xs">Reply</a>
-                                                    <p>Suspendisse vitae maximus nisl, non finibus ante. Suspendisse neque nisl, luctus ullamcorper erat a, fermentum mollis nibh. Aliquam vulputate augue vel metus suscipit euismod. Quisque id purus massa. Sed condimentum facilisis eros, ultrices tincidunt libero facilisis eget. Integer eget cursus velit.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endif %}
                                     <div class="divide-line">
                                     <img src="images/div-line.png" alt="" />
                                     </div>
@@ -159,7 +75,7 @@
                             <div class="col-md-3 col-md-offset-1">
                                 <div class="side-bar">
                                     
- 
+                                    <!-- REcent POst -->
                                     <div class="recent-post">
                                         <h4>Recent Posts</h4>
                                         <div class="posts">
@@ -170,12 +86,35 @@
                                                 </div>
                                                 <div class="recent-post-info">
                                                     <h6><a href="{{ article.get_absolute_url }}">{{article.title}}</a></h6>
-                                                    <span>24 Sep 2084</span>
+                                                    <span>{{article.date_created}}</span>
                                                 </div>
                                             </div>
-                                            {% endfor %}   
+                                            {% endfor %}    
+                                            
                                         </div> 
                                     </div>
+
+
+
+                                    <!--YOu Might Also LIke-->
+                                    <div class="recent-post">
+                                        <h4>YOu Might Also LIke</h4>
+                                        <div class="posts">
+                                            {% for article in related_recipes|slice:'3'  %}
+                                            <div class="recent-post">
+                                                <div class="recent-post-thumb">
+                                                    <a href="{{ article.get_absolute_url }}"> <img src="{{ article.image.url}}" alt="{{ article.image_alt }}" style="width: 100%; height: 70px; object-fit: cover;">
+                                                </div>
+                                                <div class="recent-post-info">
+                                                    <h6><a href="{{ article.get_absolute_url }}">{{article.title}}</a></h6>
+                                                    <span>{{article.date_created}}</span>
+                                                </div>
+                                            </div>
+                                            {% endfor %}    
+                                            
+                                        </div> 
+                                    </div>
+
 
     
                                 </div>

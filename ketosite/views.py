@@ -15,7 +15,7 @@ from django.views.generic import DetailView, TemplateView
 def home(request, category_slug=None):
     blog_post = BlogPost.objects.all()
     featured_recipe = FeaturedRecipe.objects.all()
-    recipes = Recipe.objects.all()[::-1]
+    recipes = Recipe.objects.all()
 
     if category_slug:
         # Filter recipes based on the provided category_slug
@@ -122,10 +122,12 @@ class RecipePost(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         blog_post = BlogPost.objects.all()
+        related_recipes= self.object.related_recipes.all()
         
         # Add the categories to the context
         context['categories'] = Recipe.CATEGORY_CHOICES
         context['articles'] = blog_post
+        context['related_recipes'] = related_recipes
 
         return context
 

@@ -34,6 +34,10 @@ class BlogPost(models.Model):
         super().save(*args, **kwargs)
 
 
+    class Meta:
+        ordering = ['-date_created']
+
+
 
 
 
@@ -58,6 +62,10 @@ class FeaturedRecipe(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+        
+
+    class Meta:
+        ordering = ['-date_created']
 
 
 
@@ -121,4 +129,8 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+    class Meta:
+        ordering = ['-date_created']
 

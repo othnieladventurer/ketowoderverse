@@ -48,8 +48,8 @@
             <div class="col-md-12 mt-4">
                 <div class="text-center">
                     <h2>Latest blog posts</h2>
-                    <img src="{% static 'images/under-heading.png' %}" alt="blog posts" loading="lazy" class="img-fluid"><br>
-                    <ul id="categories" class="list-inline mt-3 text-center">
+                    <img src="{% static 'images/under-heading.png' %}" alt="blog posts" loading="lazy" class="img-fluid"><br><br>
+                   <!-- <ul id="categories" class="list-inline mt-3 text-center">
                         {% for category_key, category_display in categories %}
                         <li class="list-inline-item">
                             <a style="color: black; font-size: 18px;"  href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">
@@ -58,7 +58,7 @@
                         </li>
                         {% endfor %}
 
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         </div>

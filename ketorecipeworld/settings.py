@@ -123,8 +123,12 @@ CKEDITOR_SETTINGS = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # You can change this based on your preferred database
-        'NAME': BASE_DIR / "db.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'pg-2ec85d56-giftideas.a.aivencloud.com',
+        'PORT': '18156',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
+        'PASSWORD': config('PASSWORD'),
     }
 }
 
