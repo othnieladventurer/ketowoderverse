@@ -3,6 +3,8 @@ from .models import *
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, TemplateView
 
+from django.views.decorators.cache import cache_page
+
 # Create your views here.
 
 
@@ -12,6 +14,10 @@ from django.views.generic import DetailView, TemplateView
 
 
 
+
+
+
+@cache_page(24 * 60 * 60)
 def home(request, category_slug=None):
     blog_post = BlogPost.objects.all()
     featured_recipe = FeaturedRecipe.objects.all()
