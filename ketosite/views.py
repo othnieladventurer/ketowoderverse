@@ -17,11 +17,16 @@ from django.views.decorators.cache import cache_page
 
 
 
-@cache_page(24 * 60 * 60)
+
 def home(request, category_slug=None):
     blog_post = BlogPost.objects.all()
     featured_recipe = FeaturedRecipe.objects.all()
     recipes = Recipe.objects.all()
+
+
+    page_title = 'Ketowonderverse'
+    meta_description = 'Explore keto diet facts on our home page—dive into a universe of tips, recipes, and resources for weight loss and improved health. Discover keto wonders! '
+    page_image = 'static/images/carousel.webp'
 
     if category_slug:
         # Filter recipes based on the provided category_slug
@@ -34,8 +39,11 @@ def home(request, category_slug=None):
         'articles': blog_post,
         'featureds': featured_recipe,
         'recipes': recipes,
-        'categories': categories,  # Include the categories in the context
+        'categories': categories,  
         'category': category_slug,
+        'page_title': page_title,
+        'meta_description': meta_description,
+        'page_image': page_image,
     }
     return render(request, 'ketosite/home.html', context)
 
@@ -48,10 +56,19 @@ def blog(request):
     article = BlogPost.objects.all()
     categories = Recipe.CATEGORY_CHOICES
 
+    page_title = 'Blog Posts Ketowonderverse'
+    meta_description = 'Explore inspiration on our Blogs page, where trends, heartwarming stories, and expert gift ideas unfold. Let our blogs guide you for memorable celebrations.'
+    page_image = 'static/images/carousel.webp'
+
+
+
 
     context = {
         'articles': article,
-         'categories': categories,
+        'categories': categories,
+        'page_title': page_title,
+        'meta_description': meta_description,
+        'page_image': page_image,
     }
     return render(request, 'ketosite/blog.html', context)
 
@@ -106,6 +123,10 @@ def all_recipes(request, category_slug=None):
     categories = Recipe.CATEGORY_CHOICES
     articles = BlogPost.objects.all()
 
+    page_title = 'All recipes Ketowonderverse'
+    meta_description = 'Unlock a world of flavor with KetoWonderverses keto recipes. From savory to sweet, find low-carb culinary delights to enhance your keto meal experience.'
+    page_image = 'static/images/carousel.webp'
+
     if category_slug and category_slug != 'all-recipes':
         # Filter recipes based on the provided category_slug
          recipes = Recipe.objects.filter(category=category_slug)[::-1]
@@ -115,6 +136,9 @@ def all_recipes(request, category_slug=None):
         'categories': categories,
         'selected_category': category_slug, 
         'articles':articles,
+        'page_title': page_title,
+        'meta_description': meta_description,
+        'page_image': page_image,
     }
     return render(request, 'ketosite/all_recipes.html', context)
 
@@ -171,9 +195,17 @@ def about(request):
     categories = Recipe.CATEGORY_CHOICES
     blog_post = BlogPost.objects.all()
 
+    page_title = 'About Ketowronderverse'
+    meta_description = 'Discover the heart behind KetoWonderverse. Learn about our mission to guide and inspire you on your keto and weight loss journey'
+    page_image = 'static/images/carousel.webp'
+
     context = {
         'categories': categories,
-        'articles': blog_post
+        'articles': blog_post,
+        'page_title': page_title,
+        'meta_description': meta_description,
+        'page_image': page_image,
+        
     }
     return render(request, 'ketosite/about-us.html', context)
 
@@ -186,9 +218,16 @@ def contact(request):
     categories = Recipe.CATEGORY_CHOICES
     blog_post = BlogPost.objects.all()
 
+    page_title = 'Contact Ketowronderverse'
+    meta_description = 'Reach out to KetoWonderverse for inquiries, collaborations, or simply to share your keto and low-carb experiences. We are here to support you!'
+    page_image = 'static/images/carousel.webp'
+
     context = {
         'categories': categories,
-        'articles': blog_post
+        'articles': blog_post,
+        'page_title': page_title,
+        'meta_description': meta_description,
+        'page_image': page_image,
     }
     return render(request, 'ketosite/contact-us.html', context)
 

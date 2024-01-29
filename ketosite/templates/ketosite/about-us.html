@@ -4,6 +4,18 @@
 {% load static %}
 
 
+
+{% block title %}{{ page_title }}{% endblock %}
+{% block meta_description %}{{ meta_description }}{% endblock %}
+
+
+{% block og_title %}{{ page_title }}{% endblock %}
+{% block og_description %}{{ meta_description}}{% endblock %}
+{% block og_image %}{{ page_image }}{% endblock %}
+{% block og_url %}{{ request.build_absolute_uri }}{% endblock %}
+{% block og_type %}website{% endblock %}
+
+
 {% block content %}
 <!--Carousel -->
 <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel">

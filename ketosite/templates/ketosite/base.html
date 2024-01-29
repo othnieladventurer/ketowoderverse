@@ -3,9 +3,35 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Keto Wonderverse</title>
-    <meta name="description" content="">
+    
     <meta name="viewport" content="width=device-width">
+    
+
+    <title>{% block title %}Ketowonderverse{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Explore keto diet facts on our home page—dive into a universe of tips, recipes, and resources for weight loss and improved health. Discover keto wonders!{% endblock %}">
+
+
+    
+    {% block og_tags %}
+    <meta property="og:title" content="{% block og_title %}Ketowonderverse{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Explore keto diet facts on our home page—dive into a universe of tips, recipes, and resources for weight loss and improved health. Discover keto wonders!{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'images/carousel.webp' %}{% endblock %}">
+    <meta property="og:url" content="{% block og_url %}{{ request.build_absolute_uri }}{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:site_name" content="{% block og_site_name %}Ketowonderverse{% endblock %}">
+    {% endblock %}
+
+    <!-- twitter tag -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if object.title %} {{ object.title }} {% else %} {{ page_title }} {% endif %}">
+    <meta name="twitter:description" content="{% if object.title %}{{ object.description | striptags | slice:160 }}{% else %}{{meta_description}}{% endif %}">
+    <meta name="twitter:image" content="{% if object.image_url %}{{ object.image.url }}{% else %}{{ page_image }}{% endif %}">
+    <!-- End of twitter tag-->
+
+
+
+
     <meta name="google-site-verification" content="RJw3xEUtDi193pl8gIbDX0eB29WN18GWWigDidE8tNM" />
  
 
