@@ -25,11 +25,7 @@ a:hover {
 	color: #0A0;
 }
 
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #666;
-}
+
 
 .heading-section {
   text-align: center;
@@ -68,16 +64,10 @@ p {
   display: inline-block;
   margin-right: 15px;
   padding: 10px 0;
-  font-size: 13px;
+
   font-family: 'Open Sans', sans-serif;
 }
 
-.cart-info {
-  text-align: right;
-  padding: 8px 0;
-  font-size: 13px;
-  font-family: 'Open Sans', sans-serif;
-}
 
 .logo {
   padding: 20px 0;
@@ -425,17 +415,6 @@ p {
   width: auto;
 }
 
-.hover-iner span {
-  position: absolute;
-  text-transform: uppercase;
-  color: #fff;
-  margin-top: 190px;
-  text-align: center;
-  font-size: 13px;
-  width: 100%;
-  color: #f78e21;
-  font-weight: 300;
-}
 
 .hover {
   position: absolute;
@@ -500,16 +479,9 @@ p {
   padding-right: 20px;
 }
 
-.product-title span {
-  display: inline-block;
-  font-size: 13px;
-  color: #f78e21;
-} 
 
-.product-content a {
-  font-weight: 700;
-  font-size: 13px;
-}
+
+
 
 .product-content p {
   margin-top: 5px;
@@ -720,21 +692,6 @@ textarea {
   margin: 10px 0;
 }
 
-.archives-list i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #f78e21;
-}
-
-.archives-list a {
-  text-transform: uppercase;
-  color: #888;
-  font-size: 13px;
-}
-
-.archives-list a:hover {
-  color: #f78e21;
-}
 
 .recent-post {
   overflow: hidden;
@@ -748,17 +705,7 @@ textarea {
   height: 70px;
 }
 
-.recent-post-info {
-  overflow: hidden;
-}
 
-.recent-post-info h6 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0;
-}
 
 .posts {
   margin-top: 30px;
@@ -769,15 +716,7 @@ textarea {
   color: #333;
 }
 
-.recent-post-info a:hover {
-  color: #f78e21;
-}
 
-.recent-post-info span {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #f78e21;
-}
 
 .flickr-images {
   margin-top: 20px;
@@ -1118,15 +1057,8 @@ footer {
   color: #333;
 }
 
-.recent-post-info a:hover {
-  color: #f78e21;
-}
 
-.recent-post-info span {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #f78e21;
-}
+
 
 .more-info p {
   padding-bottom: 20px;
@@ -1137,13 +1069,7 @@ footer {
   padding: 0;
 }
 
-.more-info li {
-  list-style: none;
-  margin: 10px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #666;
-}
+
 
 .more-info i {
   color: #f78e21;

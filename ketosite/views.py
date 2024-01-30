@@ -83,10 +83,12 @@ class BlogPostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         articles = BlogPost.objects.all()
+        related_articles = self.object.related_articles.all()
         
         # Add the categories to the context
         context['categories'] = Recipe.CATEGORY_CHOICES
         context['articles'] = articles
+        context['related_articles'] = related_articles
         
 
         return context

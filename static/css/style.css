@@ -20,17 +20,7 @@ a {
 
 
 
-.link a {
-    color: black; /* Set the link color to black */
-    text-decoration: none; /* Remove text decoration (underline) */
-    font-size: 16px; /* Adjust the value for the link size */
-  }
-  
-  .link {
-    font-size: 16px; /* Adjust the value for the <h3> size */
-    /* Add any other styles as necessary */
-  }
-  
+
 
 .h2-featured {
     font-size: 15px !important;
