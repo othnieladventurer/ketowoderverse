@@ -15,42 +15,28 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'ketosite:blog' %}">Blog</a>
                 </li>
-                
-
-
-                
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="recipesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Recipes
                     </a>
                     <div class="dropdown-menu text-center" aria-labelledby="recipesDropdown">
-                        
-                
                         {% for category_key, category_display in categories|slice:'1' %}
                             <a class="dropdown-item" href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">{{ category_display }}</a>
                         {% endfor %}
-
                     </div>
                 </li>
-
 
                 <li class="nav-item">
                     <a class="nav-link" href="https://beacons.ai/ketowonderverse">Keto Resources</a>
                 </li>
-                
-                
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'ketosite:about' %}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'ketosite:contact' %}">Contact</a>
                 </li>
-
-               <!-- <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ketosite:products' %}">Shop</a>
-                </li>-->
             </ul>
         </div>
     </div>
@@ -77,12 +63,20 @@
     }
 </style>
 
-<!-- Include Bootstrap's CSS (optional if not already included) -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
-<!-- Include jQuery first -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Then include Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<!-- Finally, include Bootstrap's JavaScript (including Popper.js) directly -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<!-- Use Bootstrap responsive utility classes directly in HTML -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Check if the screen is small
+        if (window.innerWidth < 992) {
+            // Add 'data-toggle' and 'data-target' attributes directly
+            document.querySelectorAll('.navbar-nav .dropdown-toggle').forEach(function (toggle) {
+                toggle.setAttribute('data-toggle', 'dropdown');
+                toggle.setAttribute('data-target', '');
+            });
+        }
+    });
+</script>
