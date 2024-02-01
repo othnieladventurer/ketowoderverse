@@ -1,82 +1,232 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'ketosite:home' %}">
-            <img src="{% static 'images/newlogo.png' %}" alt="Grill Website Template" style="width: 100%; height: 50px; object-fit: cover;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ketosite:home' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ketosite:blog' %}">Blog</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="recipesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Recipes
-                    </a>
-                    <div class="dropdown-menu text-center" aria-labelledby="recipesDropdown">
-                        {% for category_key, category_display in categories|slice:'1' %}
-                            <a class="dropdown-item" href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">{{ category_display }}</a>
-                        {% endfor %}
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://beacons.ai/ketowonderverse">Keto Resources</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ketosite:about' %}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'ketosite:contact' %}">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <a class="navbar-brand" href="{% url 'ketosite:home' %}">
+        <img src="{% static 'images/newlogo.png' %}" alt="logo" loading="lazy" style="width: 100%; height: 40px; object-fit: cover;">
+    </a>
+    
+    <div class="nav-links">
+        <ul>
+            <li class="active"> <a href="{% url 'ketosite:home' %}">Home</a></li>
+            <li><a href="{% url 'ketosite:blog' %}">Blog</a></li>
+            <li>  
+                {% for category_key, category_display in categories|slice:'1' %}
+                <a  href="{% url 'ketosite:recipe_list' category_slug=category_key|slugify %}">{{ category_display }}</a>
+                {% endfor %}
+            </li>
+            <li><a href="https://beacons.ai/ketowonderverse">Ressources</a></li>
+            <li><a href="{% url 'ketosite:about' %}">About</a></li>
+            <li><a href="{% url 'ketosite:contact' %}">Contact</a></li>
+        </ul>
     </div>
+    </div>
+    <img src="{% static 'images/menu.svg' %}" alt="menu hamburger" loading="lazy" class="menu-hamburger">
 </nav>
 
+
+
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
+
+
+
+
 <style>
-    .navbar-nav .nav-link {
-        font-size: 18px !important;
+    
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed; /* Fixed position keeps the navbar always visible */
+    top: 0; /* Place the navbar at the top of the viewport */
+    z-index: 1000; /* Adjust the z-index as needed */
+}
+
+
+
+
+
+
+.navbar a {
+    font-size: 19px;
+    font-weight: 500;
+    color: black;
+}
+
+
+
+.navbar a:hover {
+    text-decoration: none;
+    color: #Fd7e14;
+}
+
+
+
+
+
+
+
+
+.navbar .nav-links ul {
+    list-style: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align the items vertically in the center */
+}
+
+
+
+
+.navbar .nav-links ul li {
+    margin: 0 15px;
+
+}
+
+
+
+.navbar .nav-links ul li.active a{
+   color: #Fd7e14;
+   text-decoration: none;
+
+}
+
+
+.navbar .menu-hamburger {
+    display: none;
+    width: 35px;
+}
+
+
+
+.header-title {
+    font-size: 40px !important; 
+}
+.header-subtitle {
+    font-size: 30px !important;
+}
+
+.h2-size {
+    font: 18px !important;
+  }
+
+
+.font-weight-medium {
+    font-weight: bold !important;
+}
+
+
+
+
+.circular-image {
+    width: 400px; /* Adjust the width and height as needed to create the desired circle size */
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        align-items: center;
+    }
+
+
+
+    .navbar .menu-hamburger {
+        display: inline-flex;
+        /* Position the menu hamburger over the nav-links */
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        z-index: 2; 
+        align-items: center;
+    }
+
+    .nav-links {
+        top: 100%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.695);
+        backdrop-filter: blur(5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        
+        z-index: 2; /* Set a higher z-index to cover content below */
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .nav-links ul li a {
+        color: black;
+    }
+
+    .navbar .nav-links ul li {
         font-weight: bold;
-        margin-right: 15px; /* Adjust the margin as needed */
+        margin: 15px 0;
+        font-size: 1.2em;
     }
 
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-        opacity: 1;
-        visibility: visible;
+    .header-title {
+        font: 22px;
+        font-weight: bold;
     }
 
-    .dropdown-menu {
-        display: none;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease-in-out;
+
+    .header-subtitle {
+        font-size: 18px !important;
     }
+}
+/* End of navbar */
+
+
+
 </style>
 
-<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'js/main.js' %}"></script>
 
-<!-- Use Bootstrap responsive utility classes directly in HTML -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Check if the screen is small
-        if (window.innerWidth < 992) {
-            // Add 'data-toggle' and 'data-target' attributes directly
-            document.querySelectorAll('.navbar-nav .dropdown-toggle').forEach(function (toggle) {
-                toggle.setAttribute('data-toggle', 'dropdown');
-                toggle.setAttribute('data-target', '');
-            });
-        }
-    });
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
