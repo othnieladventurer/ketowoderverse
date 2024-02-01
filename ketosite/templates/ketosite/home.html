@@ -13,13 +13,19 @@
     }
 
 
+    .keto_icons {
+        
+      
+        
+        object-fit: cover;
+        margin-bottom: 15px;
+
+    }
+
+
 </style>
 
-<style>
 
-
-
-</style>
 
 <!--Carousel -->
 <div id="hero-carousel" class="carousel slide  carousel-fade" data-bs-ride="carousel">
@@ -41,9 +47,47 @@
     </div>
  
 </div>
- 
- 
 <!--End of carousel -->
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Keto Diet 101: Things you need to know.</h2><hr><br>
+  
+    <div class="card-deck">
+      
+      <!-- Card 1: What is the Keto Diet? -->
+      <div class="card text-center">
+        <div class="card-body">
+          <!-- Placeholder Avocado Icon -->
+          <img src="https://freesvg.org/img/laobc_Avocado.png" width="100" height="100" alt="Avocado" class="keto_icons">
+          <h5 class="card-title">What is the Keto Diet?</h5>
+          <p class="card-text">The Keto Diet is a low-carb, high-fat eating plan designed to induce ketosis. In this metabolic state, the body burns fat for energy. Learn about its principles and science.</p>
+        </div>
+      </div>
+  
+      <!-- Card 2: Is the Keto Diet Suitable for Everyone? -->
+      <div class="card text-center">
+        <div class="card-body">
+          <!-- Placeholder Leaf Icon -->
+          <img src="https://freesvg.org/img/food-spinach-salad.png" width="100" height="100" alt="Avocado" class="keto_icons">
+
+          <h5 class="card-title">The Benefits of the Keto diet</h5>
+          <p class="card-text">The Keto Diet, suitable for beginners, promotes weight loss, sustained energy, mental clarity, appetite control, and metabolic health benefits. With potential therapeutic applications, it emphasizes nutrient-dense foods and fats. It's crucial for beginners to consult healthcare professionals for personalized guidance.</p>
+        </div>
+      </div>
+  
+      <!-- Card 3: Is the Keto Diet Safe? -->
+      <div class="card text-center">
+        <div class="card-body">
+          <!-- Placeholder Chicken Icon -->
+          <img src="https://freesvg.org/img/1528492499.png" width="100" height="100" alt="Avocado" class="keto_icons">
+
+          <h5 class="card-title">Is the Keto Diet Safe?</h5>
+          <p class="card-text">When done properly, the Keto Diet is generally safe. However, caution is advised for those with specific health concerns. Consultation with a healthcare professional is crucial for a safe keto journey.</p>
+        </div>
+      </div>
+    
+    </div>
+</div>
 
 
 
@@ -95,12 +139,38 @@
         <button class="btn btn-lg" style="background-color: black;"><a href="{% url 'ketosite:blog' %}" style="color: white;">More Blog Posts</a></button>
     </div>
 </div>
+<br><br>
 <!-- ENd blog -->
 
 
 
 
  
+
+
+<!-- About Section -->
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="text-center">
+                <h2>Keto journey transformation</h2>
+                <img src="{% static 'images/under-heading.png' %}" alt="under-heading.png" loading="lazy" class="img-fluid" >
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+        <img src="https://images.pexels.com/photos/39853/woman-girl-freedom-happy-39853.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="keto success story" loading="lazy" style="width: 100%; height: 380px; object-fit: cover;">
+        </div>
+        <div class="col-lg-6">
+        <h2>Keto Diet Success Story</h2>
+        <p>Meet Jane, a remarkable individual whose life underwent a profound transformation through the Keto Diet. In just two months, she lost 20 pounds, experiencing heightened energy and mental clarity. The Keto Diet not only became a weight-management tool but also a catalyst for a more focused and invigorated life.</p>
+        <p>Beyond the physical changes, Jane's Keto journey contributed to an overall sense of well-being, improving her mood, sleep quality, and vitality. Jane hopes to inspire others to embark on their own transformative journeys, unlocking a healthier, more fulfilling life through dedication and guidance from healthcare professionals.</p>
+            <a class="btn btn-warning" href="https://yourcustomplan.com/start?aff=Vinnybarr" style="background-color: #fd7e14; color: white; padding: 10px;">Start your journey</a>
+        </div>
+    </div>
+</div>
+<br>
 
 
 
@@ -224,16 +294,17 @@
 
 
 
-
-<div class="container-fluid bg-dark mt-5 text-white p-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <h2 class="text-center">SUBSCRIBE TO OUR NEWSLETTER!</h2>
-            <p class="text-center text-white">Claim your free delicious keto diet recipes and stay connected with us to get all of our special offers</p>
-            <!-- Your wide button -->
-            <button class="btn btn-warning  custom-btn mt-3" type="button" style="background-color: #fd7e14;"><a class="text-white" href="https://thefreakbeatz.systeme.io/29889bc2">Subscribe Now</a></button>
-            
-            
+<div class="container">
+    <div class="container-fluid bg-dark mt-5 text-white p-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center">SUBSCRIBE TO OUR NEWSLETTER!</h2>
+                <p class="text-center text-white">Claim your free delicious keto diet recipes and stay connected with us to get all of our special offers</p>
+                <!-- Your wide button -->
+                <button class="btn btn-warning  custom-btn mt-3" type="button" style="background-color: #fd7e14;"><a class="text-white" href="https://thefreakbeatz.systeme.io/29889bc2">Subscribe Now</a></button>
+                
+                
+            </div>
         </div>
     </div>
 </div>

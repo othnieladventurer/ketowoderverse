@@ -17,7 +17,6 @@ from django.views.decorators.cache import cache_page
 
 
 
-@cache_page( 60 * 60)
 def home(request, category_slug=None):
     blog_post = BlogPost.objects.all()
     featured_recipe = FeaturedRecipe.objects.all()
