@@ -17,7 +17,7 @@ from django.views.decorators.cache import cache_page
 
 
 
-
+@cache_page( 60 * 60)
 def home(request, category_slug=None):
     blog_post = BlogPost.objects.all()
     featured_recipe = FeaturedRecipe.objects.all()
@@ -51,7 +51,7 @@ def home(request, category_slug=None):
 
 
 
-
+@cache_page( 60 * 60)
 def blog(request):
     article = BlogPost.objects.all()
     categories = Recipe.CATEGORY_CHOICES
@@ -119,7 +119,7 @@ class FeaturedPost(DetailView):
 
 
 
-
+@cache_page( 60 * 60)
 def all_recipes(request, category_slug=None):
     recipes = Recipe.objects.all()[::-1]
     categories = Recipe.CATEGORY_CHOICES
