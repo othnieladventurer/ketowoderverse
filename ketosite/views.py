@@ -43,6 +43,7 @@ def home(request, category_slug=None):
         'page_title': page_title,
         'meta_description': meta_description,
         'page_image': page_image,
+        'canonical_url': 'https://ketowonderverse.onrender.com/',
     }
     return render(request, 'ketosite/home.html', context)
 
