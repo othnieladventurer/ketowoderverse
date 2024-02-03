@@ -58,6 +58,9 @@ MIDDLEWARE = [
  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
+    'django.middleware.gzip.GZipMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -110,6 +113,19 @@ CKEDITOR_SETTINGS = {
     'customConfig': '/path/to/ckeditor_config.js',
     # Other CKEditor settings...
 }
+
+
+
+GZIP_CONTENT_TYPES = (
+    'text/html',
+    'text/css',
+    'text/javascript',
+    'application/javascript',
+    'application/x-javascript',
+    'application/json',
+    'application/xml',
+    'application/xhtml+xml',
+)
 
 
 
